@@ -31,7 +31,7 @@ Developer Assist Dashboard shows you how to build a tab with Azure DevOps work i
 1. Clone the repo to your local workspace or directly download the source code.
 1. Download [Visual Studio Code](https://code.visualstudio.com) and install [Teams Toolkit Visual Studio Code Extension](https://aka.ms/teams-toolkit).
 1. Open the project in Visual Studio Code.
-1. Update `./src/configs.ts` file with required DevOps, GitHub and Planner configurations. For more details, read [Implemented Features]() section.
+1. Update `./src/configs.ts` file with required DevOps, GitHub and Planner configurations. For more details, read [Implemented Features](https://github.com/aycabas/dev-assist-dashboard#implemented-features) section.
 
 > The first time you run this sample, you need to login to consent some delegated permissions. If you don't see the consent page, please check if your browser blocks the pop-up window.
 ![pop-up block](images/popup-block.png)
