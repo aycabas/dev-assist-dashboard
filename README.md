@@ -9,7 +9,7 @@ Microsoft Teams supports the ability to run web-based UI inside "custom tabs" th
 
 Developer Assist Dashboard shows you how to build a tab with Azure DevOps work items, GitHub issues and Planner tasks to accelerate developer team collaboration and productivity.
 
-![Developer Assist Dashboard](/images/dev-assist-dashboard.png)
+https://user-images.githubusercontent.com/36196437/223398461-e3f5a521-6439-407c-a458-584c769f730b.mp4
 
 ## Prerequisites
 
