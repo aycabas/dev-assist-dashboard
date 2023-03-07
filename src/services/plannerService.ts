@@ -64,21 +64,37 @@ export async function addTask(title: string): Promise<TaskModel[]> {
             title: title,
         };
         await graphClient.api("/planner/tasks").post(plannerTask);
-        const tasks = await graphClient
-            .api("/planner/plans/" + configs.PLAN_ID + "/tasks?$top=4")
+        const resp = await graphClient
+            .api(`/planner/plans/${configs.PLAN_ID}/tasks?$top=4`)
             .get();
-        const tasksInfo = tasks["value"];
-        let taskResult: TaskModel[] = [];
+        const tasksInfo = resp["value"];
+        let tasks: TaskModel[] = [];
         for (const obj of tasksInfo) {
-            const tmp: TaskModel = {
+            const taskInfo: TaskModel = {
                 id: obj["id"],
                 name: obj["title"],
                 priority: obj["priority"],
                 percentComplete: obj["percentComplete"],
             };
-            taskResult.push(tmp);
+            if (obj["assignments"] !== undefined) {
+                let assignMap: Map<String, object> = new Map(Object.entries(obj["assignments"]));
+                let assignments: TaskAssignedToModel[] = [];
+                let overAssignments: TaskAssignedToModel[] = [];
+                assignMap.forEach(async (value, userId) => {
+                    const assignInfo: TaskAssignedToModel = await getUser(userId as string);
+                    if (assignments.length < 2) {
+                        assignments.push(assignInfo);
+                    } else {
+                        overAssignments.push(assignInfo);
+                    }
+                });
+                taskInfo.assignments = assignments;
+                taskInfo.overAssignments = overAssignments;
+            }
+            tasks.push(taskInfo);
+            await graphClient.api("/planner/tasks/" + taskInfo.id + "/details").get();
         }
-        return taskResult;
+        return tasks;
     } catch (e) {
         throw e;
     }

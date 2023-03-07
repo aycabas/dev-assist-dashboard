@@ -41,7 +41,7 @@ Developer Assist Dashboard shows you how to build a tab with Azure DevOps work i
 ### Azure DevOps Work Items
 
 This widget displays DevOps Work Items including the title, type, assigned to and state of the work item.
-![devops-widget](https://user-images.githubusercontent.com/36196437/221166560-5c8d6be2-8846-481f-ab75-fc397ed2f15e.png)
+![devops-widget](/images/devops-backlog.png)
 
 **To integrate DevOps Work Items in the dashboard, follow the instructions:**
 
@@ -54,7 +54,7 @@ This widget displays DevOps Work Items including the title, type, assigned to an
 ### GitHub Issues
 
 This widget displays GitHub issues including the title, status and the url of the GitHub issue. This widget also includes creating a new issue:
-![github-widget](https://user-images.githubusercontent.com/36196437/221166607-c721e243-5e5d-4679-b2dd-50685c8d963f.png)
+![github-widget](/images/github-issues.png)
 
 **To integrate GitHub issues in the dashboard, follow the instructions:**
 
@@ -66,7 +66,7 @@ This widget displays GitHub issues including the title, status and the url of th
 ### Planner Tasks
 
 This widget displays Planner tasks including the title of the task. This widget also includes creating a new task functionality:
-![planner-widget](https://user-images.githubusercontent.com/36196437/221166694-819ec3da-6bb7-44ff-847b-e879db11bf02.png)
+![planner-widget](/images/planner-task.png)
 
 **To integrate Planner tasks in the dashboard, follow the instructions:**
 

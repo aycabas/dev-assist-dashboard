@@ -133,7 +133,7 @@ export class PlannerTask extends Widget<ITaskState> {
                         )
                     } // navigate to detailed page
                 >
-                    View all
+                    View on Planner
                 </Button>
             );
         } else {

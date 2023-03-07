@@ -140,7 +140,7 @@ export class GithubIssues extends Widget<IIssueState> {
                         )
                     } // navigate to detailed page
                 >
-                    View all
+                    View on GitHub
                 </Button>
             );
         } else {

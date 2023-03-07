@@ -63,7 +63,7 @@ export class DevOps extends Widget<IWorkItemState> {
                     }
                 </TeamsFxContext.Consumer>
                 <Text key="text-task-title" className={widgetStyle.headerText}>
-                    Features backlog
+                    Azure DevOps Work Items
                 </Text>
                 <Button
                     key="bt-task-more"
@@ -164,9 +164,12 @@ export class DevOps extends Widget<IWorkItemState> {
                     iconPosition="after"
                     size="small"
                     className={widgetStyle.footerBtn}
-                    onClick={() => {}} // navigate to detailed page
+                    onClick={() => window.open(
+                        "https://dev.azure.com/DemoContosoOrg/ContosoProject/_workitems/recentlyupdated/",
+                        "_blank"
+                    )} // navigate to detailed page
                 >
-                    View query
+                    View on Azure DevOps
                 </Button>
             );
         } else {
